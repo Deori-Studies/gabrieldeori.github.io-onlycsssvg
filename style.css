@@ -26,8 +26,8 @@ main {
 .c-card__conteiner {
   display: flex;
   justify-content: space-between;
-  height: 40vh;
-  width: 40vh;
+  height: 50vh;
+  width: 50vh;
 }
 
 .c-initial__card__1 {
