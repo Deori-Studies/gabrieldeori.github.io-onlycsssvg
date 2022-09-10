@@ -24,6 +24,7 @@ body {
       rgba(65, 77, 89, 0.2) 0%,
       rgba(0, 27, 54, 0.5) 100%
     );
+  position: relative;
   border: 1px solid rgba(153, 231, 255, 0.25);
   border-radius: 10px;
   height: calc(16*25px);
@@ -96,4 +97,32 @@ body {
     transform: rotateX(65deg) rotateY(0deg) rotateZ(75deg);
     margin: 20%;
   }
+}
+
+.c-card__content {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.t_card_title {
+  color: #12596b;
+  font-family: abduction_2002;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@font-face {
+  font-family: abduction_2002;
+  src: url(./fonts/abduction_2002/abduction2002.ttf);
+}
+
+@font-face {
+  font-family: ds_digital_1;
+  src: url(./fonts/ds_digital/DS-DIGI.TTF);
 }
