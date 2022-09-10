@@ -1,15 +1,12 @@
-function activateClickAnimation(element) {
+function activateClickAnimation(element, cards) {
+  cards.forEach(el => el.classList.remove("cardClicked"));
   element.classList.add("cardClicked");
-}
-
-function deactivateClickAnimation() {
-  element.classList.remove("cardClicked");
 }
 
 function addEventCards(cards) {
   cards.forEach((element) => {
     console.log(element);
-    element.addEventListener("click", event => activateClickAnimation(element));
+    element.addEventListener("click", event => activateClickAnimation(element, cards));
     // não pode ser no evento
   });
 }
