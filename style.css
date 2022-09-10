@@ -1,19 +1,97 @@
-/* #00BE67
-#00A1D5 - Azul piscina claro
-#001D31 - verde clarin
-#2B0E66 - Roxo
-#F500BD - Rosa choque
-#FF86C9 - Rosa claro
-#001B36 - Azul piscina escuro - fundo da carta
-*/
-
 body {
-  background-color: #dfdfed;
+  height: 100vh;
+  background: linear-gradient(0deg, #772da8 15.1%, #010042 100%);
+  border: 1px solid #000000;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 
-main {
+.c_card__box {
+  display: flex;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  height: 100%;
+  perspective: 35em;
+  /* perspective-origin: 50% calc(50% - 2em); */
+  transform-style: preserve-3d;
+}
+
+.card {
+  background: radial-gradient(
+      75% 75% at 50% 50%,
+      rgba(65, 77, 89, 0.2) 0%,
+      rgba(0, 27, 54, 0.5) 100%
+    );
+  border: 1px solid rgba(153, 231, 255, 0.25);
+  border-radius: 10px;
+  height: calc(16*25px);
+  width: calc(9*25px);
+  padding: 5px;
+  transition-property: translate, transform, scale, rotate;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.c-ornament {
+  
+  position: relative;
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(-1px 1px 1px rgba(0,0,0,0.75));
+}
+
+.c-ornament__1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+}
+
+.c-ornament__2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+}
+
+.card .c-ornament {
+  color: #12596b;
+}
+
+.card:hover {
+  background: radial-gradient(
+      90% 90% at 50% 50%,
+      rgba(75, 87, 99, 0.11) 0%,
+      rgba(0, 42, 83, 0.507) 100%
+    );
+  translate: 0px -30px;
+  scale: 1.2;
+}
+
+.card:hover .c-ornament svg {
+  color: #1ac5f1;
+  filter: drop-shadow(0px 0px 1px rgba(255,255,255,.75));
+}
+
+.cardClicked {
+  animation-name: cardClick;
+  animation-duration: 0.01s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cardClick {
+  to {
+    transform: rotateX(65deg) rotateY(0deg) rotateZ(75deg);
+    perspective: 10px;
+  }
+}
+
+/* main {
   background-color: #001B36;
   display: flex;
   align-items: center;
@@ -21,9 +99,9 @@ main {
   justify-content: center;
   margin: 0;
   width: 100vw;
-}
+} */
 
-.c-card__conteiner {
+/* .c-card__conteiner {
   display: flex;
   justify-content: space-between;
   height: 50vh;
@@ -111,4 +189,4 @@ main {
   left: 89%;
   top: 94.7%;
   z-index: 1;
-}
+} */
