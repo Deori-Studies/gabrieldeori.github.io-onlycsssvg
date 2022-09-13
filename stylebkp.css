@@ -1,0 +1,224 @@
+body {
+  align-items: center;
+  background: linear-gradient(0deg, #772da8 15.1%, #010042 100%);
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.c_card__box {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  width: 100%;
+  max-width: 1280px;
+}
+
+.card {
+  background: radial-gradient(
+      75% 75% at 50% 50%,
+      rgba(65, 77, 89, 0.2) 0%,
+      rgba(0, 27, 54, 0.5) 100%
+    );
+  position: relative;
+  border: 1px solid rgba(153, 231, 255, 0.25);
+  border-radius: 10px;
+  height: calc(16*25px);
+  padding: 5px;
+  transition-property: translate, transform, scale, rotate;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: calc(9*25px);
+}
+
+.c-ornament {
+  
+  filter: drop-shadow(-1px 1px 1px rgba(0,0,0,0.75));
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.c-ornament__1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+}
+
+.c-ornament__2 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 60%;
+}
+
+.card .c-ornament {
+  color: #12596b;
+}
+
+.card .c-card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .i-tdd {
+  width: 60%;
+}
+
+.card:hover {
+  background: radial-gradient(
+      90% 90% at 50% 50%,
+      rgba(75, 87, 99, 0.11) 0%,
+      rgba(0, 42, 83, 0.507) 100%
+    );
+    translate: 0px -30px;
+}
+
+.card:hover .c-ornament svg {
+  color: #1ac5f1;
+  filter: drop-shadow(1px 1px 1px rgba(255,255,255,.75));
+}
+
+.card:hover .c-card__content h2 {
+  color: #1ac5f1;
+  text-shadow:white 1px 1px;
+}
+
+.cardClicked {
+  animation-name: cardClick;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cardClick {
+  from {
+    background: radial-gradient(
+      90% 90% at 50% 50%,
+      rgba(75, 87, 99, 0.11) 0%,
+      rgba(0, 42, 83, 0.507) 100%
+    );
+    margin: 20%;
+    translate: 0px -30px;
+    scale: 1.2;
+  }
+  to {
+    transform: rotateX(65deg) rotateY(0deg) rotateZ(75deg);
+    margin: 20%;
+  }
+}
+
+.c-card__content {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.t_card_title {
+  color: #12596b;
+  font-family: abduction_2002;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@font-face {
+  font-family: abduction_2002;
+  src: url(./fonts/abduction_2002/abduction2002.ttf);
+}
+
+@font-face {
+  font-family: ds_digital_1;
+  src: url(./fonts/ds_digital/DS-DIGI.TTF);
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(0deg, #ff00ff 5%, #41006d 60%);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.c-3d__card__scene {
+  perspective: 1000px;
+  position: relative;
+}
+
+.c-3d__card {
+  position: absolute;
+}
+
+.c-3d__card__front {
+  background: radial-gradient(
+      100% 100% at 50% 50%,
+      rgba(74, 109, 145, 0.2) 35%,
+      rgba(0, 128, 255, 0.7) 100%
+    );
+  border: 1px solid rgba(153, 231, 255, 0.25);
+  border-radius: 10px;
+  display: flex;
+  height: calc(16rem);
+  padding: 20px;
+  position: relative;
+  width: calc(9rem);
+}
+
+.c-3d__card__back {
+  background: radial-gradient(
+    100% 100% at 50% 50%,
+    rgba(74, 109, 145, 0.2) 35%,
+    rgba(0, 128, 255, 0.7) 100%
+  );
+  position: absolute;
+  border: 1px solid rgba(153, 231, 255, 0.25);
+  border-radius: 10px;
+  display: flex;
+  height: calc(16rem);
+  padding: 20px;
+  width: calc(9rem);
+}
+
+.ornament-circuit__0 {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 70%
+}
+
+.ornament-circuit__1 {
+  bottom: 5px;
+  left: 5px;
+  position: absolute;
+  width: 70%
+}
+
+.cardClicked {
+  animation-name: cardClick;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cardClick {
+  from {
+  }
+
+  30% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(75deg);
+  }
+
+  to {
+    transform: rotateX(65deg) rotateY(0deg) rotateZ(75deg);
+    margin: 20%;
+  }
+}

@@ -1,6 +1,9 @@
+const CARD_CLASS = ".c-3d__card"
+const CARD_CLICKED_CLASS = "cardClicked"
+
 function activateClickAnimation(element, cards) {
-  cards.forEach(el => el.classList.remove("cardClicked"));
-  element.classList.add("cardClicked");
+  cards.forEach(el => el.classList.remove(CARD_CLICKED_CLASS));
+  element.classList.add(CARD_CLICKED_CLASS);
 }
 
 function addEventCards(cards) {
@@ -12,8 +15,7 @@ function addEventCards(cards) {
 }
 
 function loadingPage() {
-  console.log(":D");
-  const cards = Array.from(document.querySelectorAll(".card"));
+  const cards = Array.from(document.querySelectorAll(CARD_CLASS));
   addEventCards(cards);
 }
 
