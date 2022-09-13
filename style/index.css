@@ -1,0 +1,9 @@
+:root {
+  --cyberPink: #f0f;
+  --punkBlue: #104;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(var(--punkBlue) 40%, 65% ,var(--cyberPink) 85%)
+}
