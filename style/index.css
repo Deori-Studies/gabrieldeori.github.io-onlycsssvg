@@ -42,6 +42,7 @@
   min-height: 144px;
   min-width: 81px;
   width: calc(9 * 2vw);
+  transition: 2s;
 }
 
 .catch-card__ornament-0 {
@@ -64,6 +65,15 @@
   min-height: 50%;
   min-width: 50%;
   position: absolute;
+}
+
+.catch-card:hover {
+  transform: translate(0, -40px);
+}
+
+.catch-card:hover  .catch-card__ornament-0,
+.catch-card:hover .catch-card__ornament-1  {
+  background-color: var(--connectBlue);
 }
 
 @media screen and (max-width: 420px) {
