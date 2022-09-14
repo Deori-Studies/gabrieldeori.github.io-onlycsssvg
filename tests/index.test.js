@@ -39,12 +39,17 @@ describe("Test the test", () => {
 describe("Test if functions are being called on index.js", () => {
   it("should call addListenerEvents once in mainScript", () => {
     const m_addListenerEvents = jest.fn();
+
     mainScript({ addListenerEvents: m_addListenerEvents });
+
     expect(m_addListenerEvents).toHaveBeenCalledTimes(1)
   });
+
   it("should call clickCardListener once in addListenerEvents", () => {
     const m_clickCardListener = jest.fn();
+
     addListenerEvents({ clickCardListener: m_clickCardListener });
+
     expect(m_clickCardListener).toHaveBeenCalledTimes(1);
   })
 });
