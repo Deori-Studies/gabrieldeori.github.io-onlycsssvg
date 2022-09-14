@@ -5,13 +5,9 @@
   --disableBlue: rgba(0, 75, 120, 0.5);
 }
 
-body {
-  height: 100vh;
-  background-image: linear-gradient(var(--cyberPink) 10%, 20% ,var(--punkBlue) 75%)
-}
-
-main {
+.landing-page {
   align-items: center;
+  background-image: linear-gradient(var(--cyberPink) 10%, 20% ,var(--punkBlue) 75%);
   display: flex;
   height: 100vh;
   justify-content: center;
