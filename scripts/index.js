@@ -1,7 +1,7 @@
-import { hoverCardsListener } from "./catchCards/cardsListeners.js"
+import { clickCardListener } from "./catchCards/cardsListeners.js";
 
 function addListenerEvents() {
-  hoverCardsListener();
+  clickCardListener();
 }
 
 function mainScript() {

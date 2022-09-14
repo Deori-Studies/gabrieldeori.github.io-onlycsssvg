@@ -1,13 +1,13 @@
 :root {
   --cyberPink: #f0f;
-  --punkBlue: #104;
   --connectBlue: rgb(0, 200, 255);
   --disableBlue: rgba(0, 75, 120, 0.5);
+  --punkBlue: #104;
 }
 
 .landing-page {
   align-items: center;
-  background-image: linear-gradient(var(--cyberPink) 10%, 20% ,var(--punkBlue) 75%);
+  background-image: linear-gradient(var(--punkBlue) 20%, 70%, var(--cyberPink) 90%);
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -17,7 +17,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   max-width: 1920px;
   padding: 5px;
   width: 80%;
@@ -42,7 +42,7 @@
   min-height: 144px;
   min-width: 81px;
   width: calc(9 * 2vw);
-  transition: 2s;
+  transition: width 2s, height 2s, transform 0.35s ease-out;
 }
 
 .catch-card__ornament-0 {
@@ -67,13 +67,18 @@
   position: absolute;
 }
 
-.catch-card:hover {
-  transform: translate(0, -40px);
+.catch-card:hover.card-canhover {
+  transform: translateY(-4vh);
 }
 
-.catch-card:hover  .catch-card__ornament-0,
-.catch-card:hover .catch-card__ornament-1  {
+.catch-card:hover.card-canhover  .catch-card__ornament-0,
+.catch-card:hover.card-canhover .catch-card__ornament-1  {
   background-color: var(--connectBlue);
+}
+
+.card-catched {
+  background-color: red;
+  position: absolute;
 }
 
 @media screen and (max-width: 420px) {
