@@ -13,6 +13,18 @@
   justify-content: center;
 }
 
+.cover-blur {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: #fff5;
+  height: 100vh;
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  width: 100vw;
+  z-index: 1;
+}
+
 .card-container {
   align-items: center;
   display: flex;
@@ -41,8 +53,8 @@
   max-width: 405px;
   min-height: 144px;
   min-width: 81px;
-  width: calc(9 * 2vw);
   transition: width 2s, height 2s, transform 0.35s ease-out;
+  width: calc(9 * 2vw);
 }
 
 .catch-card__ornament-0 {
@@ -71,6 +83,7 @@
   transform: rotateX(68deg) rotateZ(60deg) translateZ(-40vh);
   transition-duration: 2.5s;
   transition-timing-function: ease-in-out;
+  z-index: 2;
 }
 
 .card-catched .catch-card__ornament-0 {
