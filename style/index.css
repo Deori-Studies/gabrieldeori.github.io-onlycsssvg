@@ -77,8 +77,8 @@
 }
 
 .card-catched {
-  background-color: red;
   position: absolute;
+  transform: rotateX(45deg) rotateZ(45deg);
 }
 
 @media screen and (max-width: 420px) {

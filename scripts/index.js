@@ -1,11 +1,21 @@
 import { clickCardListener } from "./catchCards/cardsListeners.js";
 
-function addListenerEvents() {
-  clickCardListener();
+function addListenerEvents(callbacks) {
+  callbacks.clickCardListener();
 }
 
-function mainScript() {
-  addListenerEvents();
+function mainScript(callbacks) {
+  callbacks.addListenerEvents(allFunctions);
 }
 
-Object.onload = mainScript();
+const allFunctions = {
+  clickCardListener,
+  addListenerEvents,
+};
+
+Object.onload = mainScript(allFunctions);
+
+export {
+  mainScript,
+  addListenerEvents,
+}
