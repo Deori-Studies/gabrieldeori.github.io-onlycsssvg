@@ -1,13 +1,22 @@
-/**
+ /**
  * @jest-environment jsdom
  */
-
+ 
  const jsdom = require("jsdom");
  const { JSDOM } = jsdom;
- 
- const newDom = new JSDOM(`
- <div class="catch-card card-canhover"></div>
- `);
+const dom = new JSDOM(`
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="catch-card card-canhover"></div>
+    <div class="catch-card card-canhover"></div>
+  </body>
+</html>
+`);
+
+const CLASS_CARD = "catch-card";
+const CATCHED_CARD = "card-catched";
+const CANHOVER_CARD = "card-canhover";
 
 import {
   addClass, removeClass, clickCardListener
@@ -15,38 +24,35 @@ import {
 
  describe("Functions are manipulating correct elements", () => {
   it("Should add and remove a class to an element", () => {
-    const classToFind = "catch-card"
-    const classToAdd = "card-canhover";
-    const elements = Array.from(newDom.window.document
-      .getElementsByClassName(classToFind));
-    const firstElement = elements[0];
-    let firstClass = firstElement.classList[0]
-    let secondClass = firstElement.classList[1]
+    const cards = Array.from(dom.window.document
+      .getElementsByClassName(CLASS_CARD));
+    const card = cards[0]
 
-    expect(firstElement.classList.length).toBe(1);
+    card.classList.forEach((cardClass) => {
+      expect(cardClass).not.toBe(CATCHED_CARD);
+    });
 
-    addClass(classToAdd, firstElement);
-    secondClass = firstElement.classList[1]
+    removeClass(CANHOVER_CARD, card);
 
-    expect(secondClass).toBe(classToAdd);
+    card.classList.forEach((cardClass) => {
+      expect(cardClass).not.toBe(CANHOVER_CARD);
+    });
 
-    removeClass(classToFind, firstElement);
-    firstClass = firstElement.classList[0]
-    secondClass = firstElement[1];
+    addClass(CATCHED_CARD, card);
 
-    expect(secondClass).toBeUndefined();
-    expect(firstClass).toBe(classToAdd);
-
-    removeClass(classToAdd, firstElement);
-    expect(firstElement.classList.length).toBe(0);
+    Array.from(card.classList).some((cardClass) => {
+      return cardClass === CATCHED_CARD;
+    });
   });
+});
 
-  it("Should remove 'can-hover' and add 'card-Catched classes'", () => {
-    const classToFind = "catch-card"
-
-    const elements = Array.from(newDom.window.document
-        .getElementsByClassName(classToFind));
-    
-    console.log(elements);
+describe("clickCardListener are adding correct eventListeners", () => {
+  it("Should remove 'can-hover' and add 'card-Catched classes'",
+  () => {
+    const classes = clickCardListener();
+    expect(classes).toEqual({
+      added: "card-catched",
+      removed: "card-canhover"
+    });
   });
 });

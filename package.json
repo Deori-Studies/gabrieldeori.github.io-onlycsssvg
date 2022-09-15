@@ -2,7 +2,7 @@
   "name": "gabrieldeori.github.io",
   "version": "0.3.0",
   "description": "Portfolio - Gabriel Deori",
-  "main": "index.js",  
+  "main": "index.js",
   "scripts": {
     "test": "jest",
     "coverage": "npm test -- --coverage"
@@ -53,21 +53,20 @@
   },
   "homepage": "https://github.com/gabrieldeori/gabrieldeori.github.io#readme",
   "devDependencies": {
-    "jest": "^29.0.3",
     "@babel/preset-env": "^7.16.11",
     "babel-jest": "^27.5.1",
     "jest": "^27.5.1"
-    },
-    "babel": {
-      "presets": [
-        [
-          "@babel/preset-env",
-          {
-            "targets": {
-              "node": "current"
-            }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
           }
-        ]
+        }
       ]
-    }
+    ]
+  }
 }
