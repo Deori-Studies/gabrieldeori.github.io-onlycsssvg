@@ -74,6 +74,78 @@
 .catch-card:hover.card-canhover  .catch-card__ornament-0,
 .catch-card:hover.card-canhover .catch-card__ornament-1  {
   background-color: var(--connectBlue);
+  background-image: repeating-conic-gradient(
+    from -0deg,
+    var(--connectBlue) 48%,
+    var(--connectBlue) 49%,
+    white 50%,
+    var(--connectBlue) 51%,
+    var(--connectBlue) 52%
+  );
+  animation: connectHover 0.2s infinite;
+}
+
+@keyframes connectHover {
+  from {
+    background-image: repeating-conic-gradient(
+      from 0deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  20% {
+    background-image: repeating-conic-gradient(
+      from 3deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  40% {
+    background-image: repeating-conic-gradient(
+      from 6deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  60% {
+    background-image: repeating-conic-gradient(
+      from 9deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  80% {
+    background-image: repeating-conic-gradient(
+      from 12deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  to {
+    background-image: repeating-conic-gradient(
+      from 0deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
 }
 
 .card-catched {
