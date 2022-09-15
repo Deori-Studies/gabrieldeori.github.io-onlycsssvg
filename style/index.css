@@ -32,7 +32,7 @@
     rgba(255, 255, 255, 0.05) 60%,
     rgb(255, 255, 255, 0.5) 100%
     );
-    border: 1px outset rgb(125, 125, 125);
+  border: 1px outset rgba(200, 200, 200, 0.5);
   border-radius: 1vw;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -69,6 +69,20 @@
     var(--connectBlue) 52%
   );
   animation: connectHover 0.2s infinite;
+}
+
+.card-catched {
+  border-style: outset outset outset outset;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-width: 1px 8px 5px 1px;
+  position: absolute;
+  transform: rotateX(68deg) rotateZ(60deg) translateZ(-40vh);
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+}
+
+.card-catched .catch-card__ornament-0 {
+  background-color: rgb(0, 255, 255);
 }
 
 @keyframes connectHover {
@@ -132,11 +146,6 @@
       var(--connectBlue) 53%
     );
   }
-}
-
-.card-catched {
-  position: absolute;
-  transform: rotateX(45deg) rotateZ(45deg);
 }
 
 @media screen and (max-width: 420px) {
