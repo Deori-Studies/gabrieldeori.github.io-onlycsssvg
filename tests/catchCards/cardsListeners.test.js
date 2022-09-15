@@ -6,12 +6,7 @@
  const { JSDOM } = jsdom;
  
  const newDom = new JSDOM(`
-  <!DOCTYPE html>
-  <body>
-    <div class="catch-card"></div>
-    <div class="catch-card"></div>
-    <div class="catch-card"></div>
-  </body>
+ <div class="catch-card card-canhover"></div>
  `);
 
 import {
@@ -44,5 +39,14 @@ import {
 
     removeClass(classToAdd, firstElement);
     expect(firstElement.classList.length).toBe(0);
+  });
+
+  it("Should remove 'can-hover' and add 'card-Catched classes'", () => {
+    const classToFind = "catch-card"
+
+    const elements = Array.from(newDom.window.document
+        .getElementsByClassName(classToFind));
+    
+    console.log(elements);
   });
 });
