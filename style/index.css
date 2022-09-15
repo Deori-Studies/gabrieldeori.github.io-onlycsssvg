@@ -46,24 +46,11 @@
 }
 
 .catch-card__ornament-0 {
-  -webkit-mask: url("../images/card/circuits_0.svg") no-repeat top;
+  -webkit-mask: url("../images/card/circuits_0.svg") no-repeat left;
   background-color: var(--disableBlue);
-  mask: url("../images/card/circuits_0.svg") no-repeat top;
-  min-height: 50%;
-  min-width: 50%;
-  position: absolute;
-  right: 0.5vw;
-  top: 0.5vw;
-}
-
-.catch-card__ornament-1 {
-  -webkit-mask: url("../images/card/circuits_1.svg") no-repeat bottom;
-  background-color: var(--disableBlue);
-  bottom: 0.5vw;
-  left: 0.5vw;
-  mask: url("../images/card/circuits_1.svg") no-repeat bottom;
-  min-height: 50%;
-  min-width: 50%;
+  mask: url("../images/card/circuits_0.svg") no-repeat left;
+  min-height: 100%;
+  min-width: 100%;
   position: absolute;
 }
 
@@ -71,8 +58,7 @@
   transform: translateY(-4vh);
 }
 
-.catch-card:hover.card-canhover  .catch-card__ornament-0,
-.catch-card:hover.card-canhover .catch-card__ornament-1  {
+.catch-card:hover.card-canhover .catch-card__ornament-0 {
   background-color: var(--connectBlue);
   background-image: repeating-conic-gradient(
     from -0deg,
