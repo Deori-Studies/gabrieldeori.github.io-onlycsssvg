@@ -2,8 +2,9 @@
   --cyberPink: #f0f;
   --connectBlue: rgb(0, 200, 255);
   --disableBlue: rgba(0, 75, 120, 0.5);
-  --hologramBlue: rgb(0, 255, 255, 0.7);
-  --hologramOther: rgb(255, 255, 255, 0.8);
+  --hologramBlue: rgb(0, 255, 255, 0.9);
+  --hologramOther: rgb(255, 255, 255, 1);
+  --hologramOtherDarker: rgba(150, 255, 255, 0.92);
   --punkBlue: #104;
 }
 
@@ -206,8 +207,8 @@ body {
 
 .hologram-active {
   animation:
-    hologramAppear 1s ease-in,
-     hologramLoop 1s infinite linear;
+    hologramAppear 0.8s ease-in,
+    hologramLoop 1s infinite linear;
 }
 
 @keyframes hologramAppear {
@@ -231,54 +232,12 @@ body {
     mask-image: radial-gradient(#000, 1%, #0000 80%);
     scale: 0 0;
   }
-
-  45% {
-    scale: 0.025 1;
-  }
-
   50% {
-    scale: 0.025 1;
-  }
-
-  55% {
-    mask-image: radial-gradient(#000, 5%, #0000 80%);
-  }
-
-  60% {
-    mask-image: radial-gradient(#000, 10%, #0000 80%);
-  }
-
-  70% {
-    mask-image: radial-gradient(#000, 15%, #0000 80%);
-  }
-
-  80% {
-    mask-image: radial-gradient(#000, 20%, #0000 80%);
-  }
-
-  90% {
-    mask-image: radial-gradient(#000, 25%, #0000 80%);
+    scale: 0.01 1;
   }
 
   100% {
-    background-image: conic-gradient(
-    from 45deg,
-    #0000 75%,
-    var(--hologramBlue) 76%,
-    #0000,
-    var(--hologramBlue) 80%,
-    #0000,
-    var(--hologramBlue) 84%,
-    #0000,
-    var(--hologramBlue) 88%,
-    #0000,
-    var(--hologramBlue) 92%,
-    #0000,
-    var(--hologramBlue) 99%,
-    #0000 100%
-  );
-    mask-image: radial-gradient(#000, 30%, #0000 80%);
-    scale: 0.9 1;
+    scale: 2.5 0.5;
   }
 }
 
@@ -287,32 +246,30 @@ body {
     background-image: conic-gradient(
     from 45deg,
     #0000 75%,
-    var(--hologramBlue) 80%,
     var(--hologramOther),
-    var(--hologramBlue) 84%,
+    var(--hologramBlue) 75%,
     var(--hologramOther),
-    var(--hologramBlue) 88%,
+    var(--hologramBlue) 77%,
     var(--hologramOther),
-    var(--hologramBlue) 95%,
+    var(--hologramBlue) 79%,
     #0000 100%
   );
-  mask-image: radial-gradient(#000, 20%, #0000 50%);
+  mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   10% {
     background-image: conic-gradient(
     from 45deg,
     #0000 75%,
+    var(--hologramOther),
+    var(--hologramBlue) 76%,
+    var(--hologramOther),
+    var(--hologramBlue) 78%,
+    var(--hologramOther),
     var(--hologramBlue) 80%,
-    var(--hologramOther),
-    var(--hologramBlue) 88%,
-    var(--hologramOther),
-    var(--hologramBlue) 92%,
-    var(--hologramOther),
-    var(--hologramBlue) 95%,
     #0000 100%
   );
-  mask-image: radial-gradient(#000, 20%, #0000 50%);
+  mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
 
@@ -320,78 +277,77 @@ body {
     background-image: conic-gradient(
       from 45deg,
       #0000 75%,
-      var(--hologramBlue) 84%,
+      var(--hologramBlue) 77%,
       var(--hologramOther),
-      var(--hologramBlue) 88%,
+      var(--hologramBlue) 80%,
       var(--hologramOther),
-      var(--hologramBlue) 95%,
+      var(--hologramBlue) 83%,
+      var(--hologramOther),
+      var(--hologramBlue) 86%,
       #0000 100%
     );
-    mask-image: radial-gradient(#000, 20%, #0000 50%);
+    mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   35% {
     background-image: conic-gradient(
       from 45deg,
       #0000 75%,
-      var(--hologramBlue) 80%,
+      var(--hologramBlue) 82%,
       var(--hologramOther),
-      var(--hologramBlue) 88%,
+      var(--hologramBlue) 86%,
       var(--hologramOther),
-      var(--hologramBlue) 92%,
+      var(--hologramBlue) 90%,
       var(--hologramOther),
-      var(--hologramBlue) 95%,
+      var(--hologramBlue) 94%,
       #0000 100%
     );
-    mask-image: radial-gradient(#000, 20%, #0000 50%);
+    mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   50% {
     background-image: conic-gradient(
       from 45deg,
       #0000 75%,
-      var(--hologramBlue) 80%,
-      var(--hologramOther),
-      var(--hologramBlue) 84%,
-      var(--hologramOther),
       var(--hologramBlue) 88%,
       var(--hologramOther),
-      var(--hologramBlue) 95%,
+      var(--hologramBlue) 94%,
+      var(--hologramOther),
+      var(--hologramBlue) 100%,
+      var(--hologramOther),
       #0000 100%
     );
-      mask-image: radial-gradient(#000, 20%, #0000 50%);
+      mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   60% {
     background-image: conic-gradient(
       from 45deg,
       #0000 75%,
-      var(--hologramBlue) 80%,
-      var(--hologramOther),
-      var(--hologramBlue) 84%,
-      var(--hologramOther),
-      var(--hologramBlue) 88%,
-      var(--hologramOther),
-      var(--hologramBlue) 92%,
+      var(--hologramBlue) 87%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 91%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 95%,
+      var(--hologramOtherDarker),
       #0000 100%
     );
-    mask-image: radial-gradient(#000, 20%, #0000 50%);
+    mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   75% {
     background-image: conic-gradient(
       from 45deg,
       #0000 75%,
-      var(--hologramBlue) 80%,
-      var(--hologramOther),
       var(--hologramBlue) 84%,
-      var(--hologramOther),
+      var(--hologramOtherDarker),
       var(--hologramBlue) 88%,
-      var(--hologramOther),
-      var(--hologramBlue) 95%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 92%,
+      var(--hologramOtherDarker),
       #0000 100%
     );
-      mask-image: radial-gradient(#000, 20%, #0000 50%);
+      mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   85% {
@@ -399,29 +355,30 @@ body {
       from 45deg,
       #0000 75%,
       var(--hologramBlue) 80%,
-      var(--hologramOther),
-      var(--hologramBlue) 88%,
-      var(--hologramOther),
-      var(--hologramBlue) 95%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 85%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 89%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 92%,
       #0000 100%
     );
-      mask-image: radial-gradient(#000, 20%, #0000 50%);
+      mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   100% {
     background-image: conic-gradient(
       from 45deg,
       #0000 75%,
+      var(--hologramOtherDarker),
       var(--hologramBlue) 80%,
-      var(--hologramOther),
-      var(--hologramBlue) 86%,
-      var(--hologramOther),
-      var(--hologramBlue) 90%,
-      var(--hologramOther),
-      var(--hologramBlue) 95%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 83%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 87%,
       #0000 100%
     );
-      mask-image: radial-gradient(#000, 20%, #0000 50%);
+      mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 }
 
