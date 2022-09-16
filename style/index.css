@@ -13,13 +13,14 @@
   justify-content: center;
 }
 
-.cover-blur {
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background-color: #fff5;
-  height: 100vh;
-  display: none;
-  visibility: hidden;
+.cover-blur-hidden {
+  
+}
+
+.cover-blur-show {
+  backdrop-filter: blur(4px);
+  background-color: #fff6;
+  height: 60vh;
   position: absolute;
   width: 100vw;
   z-index: 1;
@@ -83,7 +84,6 @@
   transform: rotateX(68deg) rotateZ(60deg) translateZ(-40vh);
   transition-duration: 2.5s;
   transition-timing-function: ease-in-out;
-  z-index: 2;
 }
 
 .card-catched .catch-card__ornament-0 {
