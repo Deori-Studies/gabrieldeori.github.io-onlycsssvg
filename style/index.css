@@ -2,7 +2,12 @@
   --cyberPink: #f0f;
   --connectBlue: rgb(0, 200, 255);
   --disableBlue: rgba(0, 75, 120, 0.5);
+  --hologramBlue: rgb(0, 200, 255);
   --punkBlue: #104;
+}
+
+body {
+  overflow: hidden;
 }
 
 .landing-page {
@@ -13,16 +18,14 @@
   justify-content: center;
 }
 
-.cover-blur-hidden {
-  
-}
-
 .cover-blur-show {
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(25px);
   background-color: #fff6;
-  height: 60vh;
+  border-radius: 10vh;
+  height: 70vh;
+  top: 0;
   position: absolute;
-  width: 100vw;
+  width: 95vw;
   z-index: 1;
 }
 
@@ -81,7 +84,10 @@
   border-style: outset outset outset outset;
   border-color: rgba(255, 255, 255, 0.5);
   border-width: 1px 8px 5px 1px;
-  transform: rotateX(68deg) rotateZ(60deg) translateZ(-40vh);
+  transform:
+    rotateX(68deg)
+    rotateZ(60deg)
+    translateZ(-44vh);
   transition-duration: 2.5s;
   transition-timing-function: ease-in-out;
 }
@@ -158,6 +164,91 @@
       51%,
       var(--connectBlue) 53%
     );
+  }
+}
+
+.hologram_top {
+  background-image: conic-gradient(
+    from 45deg,
+    #0000 75%,
+    var(--hologramBlue) 80%,
+    #0000,
+    var(--hologramBlue) 85%,
+    #0000,
+    var(--hologramBlue) 90%,
+    #0000,
+    var(--hologramBlue) 95%,
+    #0000 100%
+    );
+    border-radius: 15%;
+  height: 175vh;
+  position: absolute;
+  bottom: -45vh;
+  transform: translateY(30vh);
+  width: 100vw;
+}
+
+.hologram_bottom {
+  background-image: conic-gradient(
+      from 45deg,
+      #0000 74%,
+      rgb(0, 200, 255, 0) 74%,
+      #0000,
+      rgb(0, 200, 255, 0) 100%,
+      #0000 100%
+      );
+  height: 30vh;
+  position: absolute;
+  bottom: 0vh;
+  transform: translateY(5vh);
+  width: 100vw;
+  scale: 0 1;
+}
+
+.hologramActivate {
+  animation: hologramAppear 5s infinite ease-in-out;
+}
+
+
+@keyframes hologramAppear {
+  0% {
+    background-image: conic-gradient(
+      from 45deg,
+      #0000 75%,
+      var(--hologramBlue) 80%,
+      #0000,
+      var(--hologramBlue) 85%,
+      #0000,
+      var(--hologramBlue) 90%,
+      #0000,
+      var(--hologramBlue) 95%,
+      #0000 100%
+    );
+    scale: 0 0;
+  }
+
+  45% {
+    scale: 0.025 1;
+  }
+
+  50% {
+    scale: 0.025 1
+  }
+
+  100% {
+    background-image: conic-gradient(
+      from 45deg,
+      #0000 75%,
+      var(--hologramBlue) 80%,
+      #0000,
+      var(--hologramBlue) 85%,
+      #0000,
+      var(--hologramBlue) 90%,
+      #0000,
+      var(--hologramBlue) 95%,
+      #0000 100%
+    );
+    scale: 0.9 1;
   }
 }
 
