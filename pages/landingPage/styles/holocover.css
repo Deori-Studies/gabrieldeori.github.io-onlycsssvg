@@ -1,10 +1,22 @@
-/* .cover-blur-show {
-  backdrop-filter: blur(25px);
+.c-holocover {
+  backdrop-filter: blur(6px);
   background-color: #0ff1;
   border-radius: 10vh;
   height: 70vh;
-  top: 0;
+  max-width: 1920px;
+  top: 5vh;
   position: absolute;
-  width: 60vw;
+  visibility: hidden;
+  width: 80vw;
   z-index: 1;
-} */
+}
+
+.c-holocover.m-active {
+  visibility: visible;
+}
+
+@media screen and (max-width: 420px) {
+  .c-holocover {
+    width: 90vw;
+  }
+}
