@@ -19,6 +19,12 @@ function clickCardListener() {
 
   cards.forEach(element => {
     element.addEventListener("click", () => {
+      const hologram = Array.from(document
+        .getElementsByClassName("hologram_top"))[0];
+
+      removeClass("hologram-active", hologram);
+      addClass("hologram-active", hologram);
+
       removeClass(toRemove, element);
       addClass(toAdd, element);
 

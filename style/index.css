@@ -27,7 +27,7 @@ body {
   height: 70vh;
   top: 0;
   position: absolute;
-  width: 95vw;
+  width: 60vw;
   z-index: 1;
 }
 
@@ -198,16 +198,18 @@ body {
   );
   border-radius: 15%;
   height: 300%;
-  width: 100%;
-  position: absolute;
-  top: -50%;
   mask-image: radial-gradient(#000, 30%, #0000 80%);
-  scale: 2.5 0.5;
+  position: absolute;
+  scale: 1.5 0.5;
+  top: -50%;
+  visibility: hidden;
+  width: 100%;
 }
 
 .hologram-active {
+  visibility: visible;
   animation:
-    hologramAppear 0.8s ease-in,
+    hologramAppear 3.5s cubic-bezier(1,0,1,0),
     hologramLoop 1s infinite linear;
 }
 
@@ -237,7 +239,7 @@ body {
   }
 
   100% {
-    scale: 2.5 0.5;
+    scale: 1 0.5;
   }
 }
 
