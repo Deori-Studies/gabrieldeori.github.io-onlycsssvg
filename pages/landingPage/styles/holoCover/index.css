@@ -1,0 +1,10 @@
+.cover-blur-show {
+  backdrop-filter: blur(25px);
+  background-color: #0ff1;
+  border-radius: 10vh;
+  height: 70vh;
+  top: 0;
+  position: absolute;
+  width: 60vw;
+  z-index: 1;
+}
