@@ -20,6 +20,7 @@ body {
   align-items: center;
   background-image: linear-gradient(var(--cyberPink) 10%, 20%, var(--punkBlue) 80%);
   display: flex;
+  flex-wrap: wrap;
   height: 100vh;
   justify-content: center;
 }
