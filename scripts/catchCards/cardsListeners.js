@@ -1,44 +1,28 @@
-function addClass(class_, element) {
-  element.classList.add(class_);
-  return class_;
-}
-
-function removeClass(class_, element) {
-  element.classList.remove(class_);
-  return class_;
-}
-
 function clickCardListener() {
-  const toFind = "catch-card";
-  const toAdd = "card-catched";
-  const toRemove = "card-canhover";
-  const coverBlurHide = "cover-blur-hidden";
-  const coverBlurShow = "cover-blur-show";
+  const CLASS_HOLOCARD = "c-holocard";
+  const CLASS_HOLOGRAM = "c-hologram";
+  const CLASS_HOLOCOVER = "c-holocover";
+  const CLASS_CLICKED_CARD = "m-clicked__card";
+  const CLASS_CAN_HOVER = "m-can__hover";
+  const CLASS_ACTIVE = "m-active";
+
   const cards = Array
-    .from(document.getElementsByClassName(toFind));
+    .from(document.getElementsByClassName(CLASS_HOLOCARD));
+  const hologram = Array
+    .from(document.getElementsByClassName(CLASS_HOLOGRAM))[0];
+  const holocover = Array
+    .from(document.getElementsByClassName(CLASS_HOLOCOVER))[0]
 
-  cards.forEach(element => {
-    element.addEventListener("click", () => {
-      const hologram = Array.from(document
-        .getElementsByClassName("hologram_top"))[0];
-
-      removeClass("hologram-active", hologram);
-      addClass("hologram-active", hologram);
-
-      removeClass(toRemove, element);
-      addClass(toAdd, element);
-
-      const coverElement = Array
-        .from(document.getElementsByClassName(coverBlurHide))[0];
-      removeClass(coverBlurHide, coverElement);
-      addClass(coverBlurShow, coverElement);
+  cards.forEach(card => {
+    card.addEventListener("click", (_e) => {
+      card.classList.add(CLASS_CLICKED_CARD);
+      card.classList.remove(CLASS_CAN_HOVER);
+      hologram.classList.add(CLASS_ACTIVE);
+      holocover.classList.add(CLASS_ACTIVE);
     });
   });
-  return { removed: toRemove, added: toAdd }
 }
 
 export {
-  addClass,
-  removeClass,
   clickCardListener,
 }
