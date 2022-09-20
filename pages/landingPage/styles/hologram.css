@@ -1,4 +1,4 @@
-/* .hologram-conteiner {
+.hologram-conteiner {
   height: 50vh;
   overflow: hidden;
   position: absolute;
@@ -6,7 +6,7 @@
   width: 100vw;
 }
 
-.hologram_top {
+.c-hologram {
   background-image: conic-gradient(
     from 45deg,
     #0000 75%,
@@ -24,16 +24,17 @@
     #0000 100%
   );
   border-radius: 15%;
-  height: 300%;
+  height: 300vh;
   mask-image: radial-gradient(#000, 30%, #0000 80%);
   position: absolute;
   scale: 1.5 0.5;
-  top: -50%;
+  bottom: -139vh;
   visibility: hidden;
-  width: 100%;
+  width: 80vw;
+  z-index: 1;
 }
 
-.hologram-active {
+.c-hologram.m-active {
   visibility: visible;
   animation:
     hologramAppear 3.5s cubic-bezier(1,0,1,0),
@@ -42,23 +43,6 @@
 
 @keyframes hologramAppear {
   0% {
-    background-image: conic-gradient(
-      from 45deg,
-      #0000 75%,
-      var(--hologramBlue) 76%,
-      #0000,
-      var(--hologramBlue) 80%,
-      #0000,
-      var(--hologramBlue) 84%,
-      #0000,
-      var(--hologramBlue) 88%,
-      #0000,
-      var(--hologramBlue) 92%,
-      #0000,
-      var(--hologramBlue) 99%,
-      #0000 100%
-    );
-    mask-image: radial-gradient(#000, 1%, #0000 80%);
     scale: 0 0;
   }
   50% {
@@ -209,4 +193,4 @@
     );
       mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
-} */
+}
