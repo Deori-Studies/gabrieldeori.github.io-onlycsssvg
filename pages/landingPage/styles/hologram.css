@@ -1,4 +1,4 @@
-.hologram-conteiner {
+/* .hologram-conteiner {
   height: 50vh;
   overflow: hidden;
   position: absolute;
@@ -209,4 +209,4 @@
     );
       mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
-}
+} */
