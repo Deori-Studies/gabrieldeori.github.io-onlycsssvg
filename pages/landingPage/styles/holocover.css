@@ -9,10 +9,26 @@
   visibility: hidden;
   width: 80vw;
   z-index: 1;
+  scale: 0 0;
 }
 
 .c-holocover.m-active {
   visibility: visible;
+  animation: holocoverAppear 2.5s cubic-bezier(1,0.2,1,0) forwards;
+}
+
+@keyframes holocoverAppear {
+  from {
+    scale: 0 0;
+  }
+
+  50% {
+    scale: 0.01 1;
+  }
+
+  to {
+    scale: 1 1;
+  }
 }
 
 @media screen and (max-width: 420px) {
