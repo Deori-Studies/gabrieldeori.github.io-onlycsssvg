@@ -1,0 +1,19 @@
+.c-holocard.m-takenout {
+  background-color: #3333;
+  animation: takeHimOut 2s forwards;
+}
+
+.c-holocard.m-takenout#holocard1 {
+  translate: 6vh 0;
+}
+
+.c-holocard.m-takenout#holocard3 {
+  translate: -6vh 0;
+}
+
+@keyframes takeHimOut {
+  to {
+    transform:
+      translate(0, 50vh);
+  }
+}
