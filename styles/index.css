@@ -1,6 +1,7 @@
+@import "./card.css";
+@import "./holocontent.css";
 @import "./holocover.css";
 @import "./hologram.css";
-@import "./card.css";
 
 :root {
   --cyberPink: #f0f;

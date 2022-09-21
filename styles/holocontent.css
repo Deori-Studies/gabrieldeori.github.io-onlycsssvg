@@ -1,0 +1,23 @@
+@font-face {
+  font-family: abduction2002;
+  src: url("../fonts/abduction_2002/abduction2002.ttf");
+}
+
+@font-face {
+  font-family: dsdigital;
+  src: url("../fonts/ds_digital/DS-DIGI.TTF");
+}
+
+@font-face {
+  font-family: F25_Bank_Printer;
+  src: url("../fonts/f25_bank_printer/F25_Bank_Printer.ttf")
+}
+
+.c-holocontent {
+  color: white;
+  font-family: F25_Bank_Printer;
+  font-size: calc(0.4vw + 1.4vh);
+  text-align: justify;
+  text-shadow: 2px 2px 2px #f0fd;
+  width: 75%;
+}

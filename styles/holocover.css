@@ -1,17 +1,20 @@
 .c-holocover {
+  align-items: center;
   backdrop-filter: blur(6px);
   background-color: var(--hologramBlue);
   background-image: repeating-linear-gradient(#fff1 0.25%, #0001 0.75%);
   mask-image: radial-gradient(50% 100%, #000, 70%, #0000 95%);
   border-radius: 15vh;
+  display: flex;
   height: 70vh;
+  justify-content: center;
   max-width: 1920px;
   top: 5vh;
   position: absolute;
+  scale: 0 0;
   visibility: hidden;
   width: 80vw;
   z-index: 1;
-  scale: 0 0;
 }
 
 @keyframes holocoverLoop {
