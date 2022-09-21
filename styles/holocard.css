@@ -33,11 +33,35 @@
   position: absolute;
 }
 
+.c-holocard .c-svg {
+  background-color: var(--disableBlue);
+  margin-top: 30%;
+  margin-left: 25%;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+}
+
+.m-icon1 {
+  mask: url("./masks/card/creative.svg") no-repeat left;
+  -webkit-mask: url("./masks/card/creative.svg") no-repeat left;
+}
+
+.m-icon2 {
+  mask: url("./masks/card/webpages.svg") no-repeat left;
+  -webkit-mask: url("./masks/card/teamwork.svg") no-repeat left;
+}
+
+.m-icon3 {
+  mask: url("./masks/card/codepage.svg") no-repeat left;
+  -webkit-mask: url("./masks/card/codepage.svg") no-repeat left;
+}
+
 .c-holocard:hover.m-can__hover {
   transform: translateY(-4vh);
 }
 
-.c-holocard:hover.m-can__hover .c-holocard__circuits {
+.c-holocard:hover.m-can__hover img {
   background-color: var(--connectBlue);
 }
 
@@ -61,7 +85,7 @@
   }
 }
 
-.c-holocard.m-clicked__card .c-holocard__circuits {
+.c-holocard.m-clicked__card img{
   background-image: repeating-conic-gradient(
     from -0deg,
     var(--connectBlue) 48%,
