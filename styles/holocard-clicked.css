@@ -1,0 +1,101 @@
+.m-clicked__card {
+  border-style: outset outset outset outset;
+  border-color: #fff5 #bbb3 #bbb3 #fff5;
+  border-width: 2px 8px 5px 2px;
+  transition-duration: 2.5s;
+  transition-timing-function: ease-in-out;
+  position: absolute;
+  animation: dropDownCard 2s forwards; !important
+  z-index: 1;
+}
+
+@keyframes dropDownCard {
+  to {
+    transform:
+    rotateX(70deg)
+    rotateZ(70deg)
+    translateZ(-42vh);
+  }
+}
+
+.c-holocard.m-clicked__card img{
+  background-image: repeating-conic-gradient(
+    from -0deg,
+    var(--connectBlue) 48%,
+    var(--connectBlue) 49%,
+    white 50%,
+    var(--connectBlue) 51%,
+    var(--connectBlue) 52%
+  );
+  animation: connectHover 0.2s infinite;
+}
+
+.c-holocard.m-clicked__card h2 {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: connectHover 0.2s infinite;
+}
+
+@keyframes connectHover {
+  from {
+    background-image: repeating-conic-gradient(
+      from 0deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  20% {
+    background-image: repeating-conic-gradient(
+      from 3deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  40% {
+    background-image: repeating-conic-gradient(
+      from 6deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  60% {
+    background-image: repeating-conic-gradient(
+      from 9deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  80% {
+    background-image: repeating-conic-gradient(
+      from 12deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+  to {
+    background-image: repeating-conic-gradient(
+      from 0deg,
+      var(--connectBlue) 48%,
+      49%,
+      white 50%,
+      51%,
+      var(--connectBlue) 53%
+    );
+  }
+}
