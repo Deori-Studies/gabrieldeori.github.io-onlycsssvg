@@ -1,37 +1,8 @@
+@import "./fonts.css";
 @import "./holocard.css";
 @import "./holocontent.css";
 @import "./holocover.css";
 @import "./hologram.css";
-
-@font-face {
-  font-family: abduction2002;
-  src: url("./fonts/abduction_2002/abduction2002.ttf");
-}
-
-@font-face {
-  font-family: dsdigital;
-  src: url("./fonts/ds_digital/DS-DIGI.TTF");
-}
-
-@font-face {
-  font-family: F25_Bank_Printer;
-  src: url("./fonts/f25_bank_printer/F25_Bank_Printer.ttf");
-}
-
-@font-face {
-  font-family: jackinput;
-  src: url("./fonts/jackinput/JAi_____.TTF");
-}
-
-@font-face {
-  font-family: sono;
-  src: url("./fonts/sono/web/Sono-ExtraBold.woff2");
-}
-
-@font-face {
-  font-family: azonix;
-  src: url("./fonts/azonix/Azonix.otf");
-}
 
 :root {
   --cyberPink: #f0f;
