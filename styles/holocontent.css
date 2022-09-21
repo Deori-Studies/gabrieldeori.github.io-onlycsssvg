@@ -1,19 +1,28 @@
 .c-holocontent {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-flow: column nowrap;
   height: 100%;
   width: 75%;
 }
 
 .c-holocontent header {
+  align-items: center;
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: center;
+  height: 7.5%;
 }
 
-.c-holocontent main {
+.c-holocontent header h1 {
+  color: white;
+  font-family: F25_Bank_Printer;
+  font-size: calc(0.5vw + 1.6vh);
+  text-align: justify;
+  text-shadow: 2px 2px 2px #f0fd;
+}
+
+.c-holocontent main p {
   color: white;
   font-family: F25_Bank_Printer;
   font-size: calc(0.4vw + 1.4vh);
@@ -22,7 +31,24 @@
 }
 
 .c-holocontent footer {
+  align-items: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
+}
+
+.c-holocontent footer button {
+  --cyberPink: #f0f9;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 4px solid var(--cyberPink);
+  border-top: 4px solid var(--cyberPink);
+  color: white;
+  font-size: calc(0.4vw + 1.4vh);
+}
+
+.c-holocontent footer button:active {
+  border-bottom: 2px solid var(--cyberPink);
+  border-top: 2px solid var(--cyberPink);
+  translate: 0 5px
 }
