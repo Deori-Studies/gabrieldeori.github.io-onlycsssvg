@@ -6,9 +6,9 @@
   --cyberPink: #f0f;
   --connectBlue: rgb(0, 200, 255);
   --disableBlue: rgba(0, 75, 120, 0.5);
-  --hologramBlue: rgb(0, 255, 255, 0.9);
-  --hologramOther: rgb(255, 255, 255, 1);
-  --hologramOtherDarker: rgba(150, 255, 255, 0.92);
+  --hologramBlue: rgb(0, 255, 255, 0.4);
+  --hologramOther: rgb(225, 255, 255, 0.9);
+  --hologramOtherDarker: rgba(100, 225, 225, 0.6);
   --punkBlue: #104;
 }
 

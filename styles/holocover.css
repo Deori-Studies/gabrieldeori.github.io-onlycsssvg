@@ -1,7 +1,9 @@
 .c-holocover {
   backdrop-filter: blur(6px);
-  background-color: #0ff1;
-  border-radius: 10vh;
+  background-color: var(--hologramBlue);
+  background-image: repeating-linear-gradient(#fff1 0.25%, #0001 0.75%);
+  mask-image: radial-gradient(50% 100%, #000, 70%, #0000 95%);
+  border-radius: 15vh;
   height: 70vh;
   max-width: 1920px;
   top: 5vh;
@@ -12,9 +14,33 @@
   scale: 0 0;
 }
 
+@keyframes holocoverLoop {
+  from {
+    background-image: repeating-linear-gradient(#fff1 0%, #0001 0.5%);
+  }
+
+  25% {
+    background-image: repeating-linear-gradient(#fff1 0.25%, #0001 0.5%);
+  }
+
+  50% {
+    background-image: repeating-linear-gradient(#fff1 0.5%, #0001 1%);
+  }
+
+  75% {
+    background-image: repeating-linear-gradient(#fff1 0.75%, #0001 1%);
+  }
+
+  to {
+    background-image: repeating-linear-gradient(#fff1 0.5%, #0001 1.5%);
+  }
+}
+
 .c-holocover.m-active {
   visibility: visible;
-  animation: holocoverAppear 2.5s cubic-bezier(1,0.2,1,0) forwards;
+  animation:
+  holocoverAppear 2.50s cubic-bezier(1,0.2,1,0) forwards,
+  holocoverLoop 0.65s infinite;
 }
 
 @keyframes holocoverAppear {
