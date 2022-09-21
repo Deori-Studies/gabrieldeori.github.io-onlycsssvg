@@ -5,7 +5,7 @@ const CLICKED_CARD = "m-clicked__card";
 const HOLOCARD = "c-holocard";
 const HOLOCOVER = "c-holocover";
 const HOLOGRAM = "c-hologram";
-const PUTAWAY = "m-putaway";
+const TAKENOUT = "m-takenout";
 
 export default {
   ACTIVE,
@@ -15,5 +15,5 @@ export default {
   HOLOCARD,
   HOLOCOVER,
   HOLOGRAM,
-  PUTAWAY,
+  TAKENOUT,
 }

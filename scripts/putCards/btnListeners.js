@@ -14,7 +14,7 @@ function btnPutCardListener() {
       .getElementsByClassName(CLASSES.CLICKED_CARD)[0];
 
     actualCard.classList.remove(CLASSES.CLICKED_CARD);
-    actualCard.classList.add(CLASSES.PUTAWAY);
+    actualCard.classList.add(CLASSES.TAKENOUT);
 
     hologram.classList.remove(CLASSES.ACTIVE)
     holocover.classList.remove(CLASSES.ACTIVE)
