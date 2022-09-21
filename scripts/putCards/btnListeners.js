@@ -6,6 +6,8 @@ function btnPutCardListener() {
   const btnPutCard = document.getElementById(IDS.BTN_PUTCARD);
   const hologram = document.getElementsByClassName(CLASSES.HOLOGRAM)[0];
   const holocover = document.getElementsByClassName(CLASSES.HOLOCOVER)[0];
+  const cards = Array
+    .from(document.getElementsByClassName(CLASSES.HOLOCARD));
 
   btnPutCard.addEventListener("click", () => {
     const actualCard = document
@@ -17,6 +19,10 @@ function btnPutCardListener() {
 
     hologram.classList.remove(CLASSES.ACTIVE)
     holocover.classList.remove(CLASSES.ACTIVE)
+
+    cards.forEach((card) => {
+      card.classList.add(CLASSES.CLICKABLE);
+    })
   });
 }
 
