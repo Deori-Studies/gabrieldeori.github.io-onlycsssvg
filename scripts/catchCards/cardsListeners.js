@@ -15,12 +15,12 @@ function clickCardListener() {
   
       if (clickable) {
         card.classList.add(CLASSES.CLICKED_CARD);
-        card.classList.remove(CLASSES.CAN_HOVER);
         hologram.classList.add(CLASSES.ACTIVE);
         holocover.classList.add(CLASSES.ACTIVE);
 
         cards.forEach((newCard) => {
           newCard.classList.remove(CLASSES.CLICKABLE);
+          newCard.classList.remove(CLASSES.CAN_HOVER);
         });
       }
     });

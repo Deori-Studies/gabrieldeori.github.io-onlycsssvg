@@ -15,13 +15,13 @@ function btnPutCardListener() {
 
     actualCard.classList.remove(CLASSES.CLICKED_CARD);
     actualCard.classList.add(CLASSES.PUTAWAY);
-    actualCard.classList.add(CLASSES.CAN_HOVER);
 
     hologram.classList.remove(CLASSES.ACTIVE)
     holocover.classList.remove(CLASSES.ACTIVE)
 
     cards.forEach((card) => {
       card.classList.add(CLASSES.CLICKABLE);
+      card.classList.add(CLASSES.CAN_HOVER);
     })
   });
 }
