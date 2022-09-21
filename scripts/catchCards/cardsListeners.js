@@ -11,10 +11,18 @@ function clickCardListener() {
 
   cards.forEach(card => {
     card.addEventListener("click", (_e) => {
-      card.classList.add(CLASSES.CLICKED_CARD);
-      card.classList.remove(CLASSES.CAN_HOVER);
-      hologram.classList.add(CLASSES.ACTIVE);
-      holocover.classList.add(CLASSES.ACTIVE);
+      const clickable = card.classList.contains(CLASSES.CLICKABLE);
+  
+      if (clickable) {
+        card.classList.add(CLASSES.CLICKED_CARD);
+        card.classList.remove(CLASSES.CAN_HOVER);
+        hologram.classList.add(CLASSES.ACTIVE);
+        holocover.classList.add(CLASSES.ACTIVE);
+
+        cards.forEach((newCard) => {
+          newCard.classList.remove(CLASSES.CLICKABLE);
+        });
+      }
     });
   });
 }
