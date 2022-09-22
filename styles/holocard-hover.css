@@ -1,0 +1,11 @@
+.c-holocard:hover.m-can__hover {
+  transform: translateY(-4vh);
+}
+
+.c-holocard:hover.m-can__hover img {
+  background-color: var(--connectBlue);
+}
+
+.c-holocard:hover.m-can__hover h2 {
+  color: var(--connectBlue);
+}
