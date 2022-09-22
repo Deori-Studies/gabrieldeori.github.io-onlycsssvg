@@ -18,3 +18,23 @@
       translateY(50vh);
   }
 }
+
+.c-holocard.m-takenout.c-holocard.m-takenout.m-clicked__card {
+  animation: takeCardIn 2s forwards;
+}
+
+@keyframes takeCardIn {
+  from {
+    transform:
+      rotateX(0)
+      rotateY(0)
+      translateY(50vh);
+  }
+
+  to {
+    transform:
+    rotateX(70deg)
+    rotateZ(70deg)
+    translateZ(-42vh);
+  }
+}
