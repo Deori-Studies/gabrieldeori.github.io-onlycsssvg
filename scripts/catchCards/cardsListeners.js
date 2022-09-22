@@ -1,9 +1,4 @@
 import CLASSES from "../variables/CLASSES.js";
-import IDS from "../variables/IDS.js";
-
-const holocardsInfos = {
-  catchedCards: {},
-}
 
 function mainClassHandler(paramCard, cards) {
   const hologram = Array
@@ -21,19 +16,6 @@ function mainClassHandler(paramCard, cards) {
   });
 }
 
-function countCard(card) {
-  if(!holocardsInfos.catchedCards.hasOwnProperty(card.id)) {
-    holocardsInfos.catchedCards[card.id] = true;
-  }
-
-  if (Object.keys(holocardsInfos.catchedCards).length >= 3) {
-    const extraCard = document.getElementById(IDS.HOLOCARD4);
-    extraCard.classList.remove(CLASSES.DISABLED);
-    extraCard.classList.add(CLASSES.CLICKABLE);
-    extraCard.classList.add(CLASSES.CAN_HOVER);
-  }
-}
-
 function clickCardListener() {
 
   const cards = Array
@@ -45,7 +27,6 @@ function clickCardListener() {
 
       if (clickable) {
         mainClassHandler(card, cards);
-        countCard(card);
       }
     });
   });

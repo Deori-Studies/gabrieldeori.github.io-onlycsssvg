@@ -1,6 +1,24 @@
 import CLASSES from "../variables/CLASSES.js";
 import IDS from "../variables/IDS.js";
 
+const holocardsInfos = {
+  catchedCards: {},
+}
+
+function countCard(card) {
+  if(!holocardsInfos.catchedCards.hasOwnProperty(card.id)) {
+    holocardsInfos.catchedCards[card.id] = true;
+    console.log(holocardsInfos.catchedCards)
+  }
+
+  if (Object.keys(holocardsInfos.catchedCards).length >= 3) {
+    const extraCard = document.getElementById(IDS.HOLOCARD4);
+    extraCard.classList.remove(CLASSES.DISABLED);
+    extraCard.classList.add(CLASSES.CLICKABLE);
+    extraCard.classList.add(CLASSES.CAN_HOVER);
+  }
+}
+
 function btnPutCardListener() {
 
   const btnPutCard = document.getElementById(IDS.BTN_PUTCARD);
@@ -16,6 +34,10 @@ function btnPutCardListener() {
 
     actualCard.classList.remove(CLASSES.CLICKED_CARD);
     actualCard.classList.add(CLASSES.TAKENOUT);
+
+    if(actualCard) {
+      countCard(actualCard);
+    }
 
     hologram.classList.remove(CLASSES.ACTIVE);
     holocover.classList.remove(CLASSES.ACTIVE);
