@@ -5,8 +5,8 @@
   transition-duration: 2.5s;
   transition-timing-function: ease-in-out;
   position: absolute;
-  animation: dropDownCard 2s forwards; !important
-  z-index: 1;
+  animation: dropDownCard 2s forwards;
+  z-index: 2;
 }
 
 @keyframes dropDownCard {
