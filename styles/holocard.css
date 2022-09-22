@@ -65,17 +65,22 @@
   width: 75%;
 }
 
-.m-icon1 {
+.c-holocard .m-icon1 {
   mask: url("./masks/card/creative.svg") no-repeat left;
   -webkit-mask: url("./masks/card/creative.svg") no-repeat left;
 }
 
-.m-icon2 {
+.c-holocard .m-icon2 {
   mask: url("./masks/card/webpages.svg") no-repeat left;
   -webkit-mask: url("./masks/card/teamwork.svg") no-repeat left;
 }
 
-.m-icon3 {
+.c-holocard .m-icon3 {
   mask: url("./masks/card/codepage.svg") no-repeat left;
   -webkit-mask: url("./masks/card/codepage.svg") no-repeat left;
+}
+
+.c-holocard .m-icon4 {
+  mask: url("./masks/card/unlocked.svg") no-repeat left;
+  -webkit-mask: url("./masks/card/unlocked.svg") no-repeat left;
 }
