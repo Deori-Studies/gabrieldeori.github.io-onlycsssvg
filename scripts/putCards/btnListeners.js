@@ -8,7 +8,6 @@ const holocardsInfos = {
 function countCard(card) {
   if(!holocardsInfos.catchedCards.hasOwnProperty(card.id)) {
     holocardsInfos.catchedCards[card.id] = true;
-    console.log(holocardsInfos.catchedCards)
   }
 
   const catchedCards = Object.keys(holocardsInfos.catchedCards).length;
@@ -25,13 +24,15 @@ function countCard(card) {
       .from(document.getElementsByClassName(CLASSES.HOLOCARD));
     const linkPort = Array
       .from(document.getElementsByClassName(CLASSES.REDIR_PORTF))[0];
+    const hologram = Array
+      .from(document.getElementsByClassName(CLASSES.HOLOGRAM))[0];
 
     cards.forEach((card) => {
       card.classList.remove(CLASSES.TAKENOUT);
       card.classList.add(CLASSES.CLICKED_CARD);
     });
-
-    linkPort.classList.remove(CLASSES.DISABLED);
+    linkPort.classList.add(CLASSES.ACTIVE);
+    hologram.classList.add(CLASSES.SPECIAL);
   }
 
 }
@@ -52,10 +53,6 @@ function btnPutCardListener() {
     actualCard.classList.remove(CLASSES.CLICKED_CARD);
     actualCard.classList.add(CLASSES.TAKENOUT);
 
-    if(actualCard) {
-      countCard(actualCard);
-    }
-
     hologram.classList.remove(CLASSES.ACTIVE);
     holocover.classList.remove(CLASSES.ACTIVE);
 
@@ -69,6 +66,9 @@ function btnPutCardListener() {
     });
 
     holocontent.innerHTML = "";
+    if(actualCard) {
+      countCard(actualCard);
+    }
   });
 }
 

@@ -7,6 +7,7 @@ const HOLOCARD = "c-holocard";
 const HOLOCOVER = "c-holocover";
 const HOLOGRAM = "c-hologram";
 const REDIR_PORTF = "c-redir__portfolio"
+const SPECIAL = "m-holospecial"
 const TAKENOUT = "m-takenout";
 
 export default {
@@ -19,5 +20,6 @@ export default {
   HOLOCOVER,
   HOLOGRAM,
   REDIR_PORTF,
+  SPECIAL,
   TAKENOUT,
 }

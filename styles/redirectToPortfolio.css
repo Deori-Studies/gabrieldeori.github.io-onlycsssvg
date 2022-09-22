@@ -1,9 +1,7 @@
 .c-redir__portfolio {
-  position: absolute;
-}
-
-.c-redir__portfolio.m-disabled {
   display: none;
+  position: absolute;
+  scale: 0 0;
 }
 
 .c-redir__portfolio a {
@@ -12,4 +10,191 @@
   font-family: "3DIso";
   text-shadow: 2px 2px 0 var(--cyberPink);
   text-decoration: none;
+  animation: redirTxtShadowLoop 1s infinite ease-out;
+}
+
+@keyframes redirTxtShadowLoop {
+  50% {
+    text-shadow: 4px 4px 2px #f00c;
+    font-size: calc(2.1vw + 2.1vh);
+  }
+}
+
+.c-redir__portfolio.m-active {
+  display: initial;
+  animation: redirAppearAll 3s cubic-bezier(1,0.2,1,0) forwards;
+}
+
+@keyframes redirAppearAll {
+  0% {
+    scale: 0 0;
+  }
+  75% {
+    scale: 0.01 1;
+  }
+
+  100% {
+    scale: 1 1;
+  }
+}
+
+.c-hologram.m-holospecial {
+  visibility: visible;
+  animation:
+    hologramAppearAll 3s cubic-bezier(1,0.2,1,0) forwards,
+    hologramLoopAll 0.8s infinite linear;
+}
+
+@keyframes hologramAppearAll {
+  0% {
+    scale: 0 0;
+  }
+  50% {
+    scale: 0.01 1;
+  }
+
+  100% {
+    scale: 1.5 0.25;
+  }
+}
+
+@keyframes hologramLoopAll {
+  0% {
+    background-image: conic-gradient(
+    from 45deg,
+    #0000 75%,
+    var(--hologramOther),
+    var(--hologramBlue) 75%,
+    var(--hologramOther),
+    var(--hologramBlue) 77%,
+    var(--hologramOther),
+    var(--hologramBlue) 79%,
+    #0000 100%
+  );
+  mask-image: radial-gradient(#000, 40%, #0000 55%);
+  }
+
+  10% {
+    background-image: conic-gradient(
+    from 45deg,
+    #0000 75%,
+    var(--hologramOther),
+    var(--hologramBlue) 76%,
+    var(--hologramOther),
+    var(--hologramBlue) 78%,
+    var(--hologramOther),
+    var(--hologramBlue) 80%,
+    #0000 100%
+  );
+  mask-image: radial-gradient(#000, 40%, #0000 55%);
+  }
+
+
+  25% {
+    background-image: conic-gradient(
+      from 45deg,
+      #0000 75%,
+      var(--hologramBlue) 77%,
+      var(--hologramOther),
+      var(--hologramBlue) 80%,
+      var(--hologramOther),
+      var(--hologramBlue) 83%,
+      var(--hologramOther),
+      var(--hologramBlue) 86%,
+      #0000 100%
+    );
+    mask-image: radial-gradient(#000, 40%, #0000 55%);
+  }
+
+  35% {
+    background-image: conic-gradient(
+      from 45deg,
+      #0000 75%,
+      var(--hologramBlue) 82%,
+      var(--hologramOther),
+      var(--hologramBlue) 86%,
+      var(--hologramOther),
+      var(--hologramBlue) 90%,
+      var(--hologramOther),
+      var(--hologramBlue) 94%,
+      #0000 100%
+    );
+    mask-image: radial-gradient(#000, 40%, #0000 55%);
+  }
+
+  50% {
+    background-image: conic-gradient(
+      from 45deg,
+      #0000 75%,
+      var(--hologramBlue) 88%,
+      var(--hologramOther),
+      var(--hologramBlue) 94%,
+      var(--hologramOther),
+      var(--hologramBlue) 100%,
+      var(--hologramOther),
+      #0000 100%
+    );
+      mask-image: radial-gradient(#000, 40%, #0000 55%);
+  }
+
+  60% {
+    background-image: conic-gradient(
+      from 45deg,
+      #0000 75%,
+      var(--hologramBlue) 87%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 91%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 95%,
+      var(--hologramOtherDarker),
+      #0000 100%
+    );
+    mask-image: radial-gradient(#000, 40%, #0000 55%);
+  }
+
+  75% {
+    background-image: conic-gradient(
+      from 45deg,
+      #0000 75%,
+      var(--hologramBlue) 84%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 88%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 92%,
+      var(--hologramOtherDarker),
+      #0000 100%
+    );
+      mask-image: radial-gradient(#000, 40%, #0000 55%);
+  }
+
+  85% {
+    background-image: conic-gradient(
+      from 45deg,
+      #0000 75%,
+      var(--hologramBlue) 80%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 85%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 89%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 92%,
+      #0000 100%
+    );
+      mask-image: radial-gradient(#000, 40%, #0000 55%);
+  }
+
+  100% {
+    background-image: conic-gradient(
+      from 45deg,
+      #0000 75%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 80%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 83%,
+      var(--hologramOtherDarker),
+      var(--hologramBlue) 87%,
+      #0000 100%
+    );
+      mask-image: radial-gradient(#000, 40%, #0000 55%);
+  }
 }
