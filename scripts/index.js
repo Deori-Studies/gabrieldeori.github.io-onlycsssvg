@@ -1,7 +1,9 @@
+import { addContent } from "./holocontent/addContent.js";
 import { clickCardListener } from "./catchCards/cardsListeners.js";
 import { btnPutCardListener } from "./putCards/btnListeners.js";
 
 function addListenerEvents(callbacks) {
+  callbacks.addContent();
   callbacks.clickCardListener();
   callbacks.btnPutCardListener();
 }
@@ -14,6 +16,7 @@ const allFunctions = {
   clickCardListener,
   addListenerEvents,
   btnPutCardListener,
+  addContent,
 };
 
 Object.onload = mainScript(allFunctions);
