@@ -64,6 +64,15 @@ const cardsContents = {
       Pode ser entendida também como a ponte entre o \
       pensamento abstrato e o seu correspondente tangível"
     },
+  [IDS.HOLOCARD4]: {
+    h1: "UNLOCKED",
+    p: "A criatividade é uma competência de valor e \
+    aplicabilidade universais, descrita como a \
+    capacidade de um indivíduo imaginar, criar, \
+    produzir ou inventar conceitos e coisas inéditas. \
+    Pode ser entendida também como a ponte entre o \
+    pensamento abstrato e o seu correspondente tangível"
+  },
 }
 
 export {
