@@ -11,12 +11,29 @@ function countCard(card) {
     console.log(holocardsInfos.catchedCards)
   }
 
-  if (Object.keys(holocardsInfos.catchedCards).length >= 3) {
+  const catchedCards = Object.keys(holocardsInfos.catchedCards).length;
+
+  if (catchedCards === 3) {
     const extraCard = document.getElementById(IDS.HOLOCARD4);
     extraCard.classList.remove(CLASSES.DISABLED);
     extraCard.classList.add(CLASSES.CLICKABLE);
     extraCard.classList.add(CLASSES.CAN_HOVER);
   }
+
+  if (catchedCards === 4) {
+    const cards = Array
+      .from(document.getElementsByClassName(CLASSES.HOLOCARD));
+    const linkPort = Array
+      .from(document.getElementsByClassName(CLASSES.REDIR_PORTF))[0];
+
+    cards.forEach((card) => {
+      card.classList.remove(CLASSES.TAKENOUT);
+      card.classList.add(CLASSES.CLICKED_CARD);
+    });
+
+    linkPort.classList.remove(CLASSES.DISABLED);
+  }
+
 }
 
 function btnPutCardListener() {

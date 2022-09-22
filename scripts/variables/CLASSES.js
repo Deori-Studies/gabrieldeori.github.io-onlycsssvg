@@ -6,6 +6,7 @@ const DISABLED = "m-disabled";
 const HOLOCARD = "c-holocard";
 const HOLOCOVER = "c-holocover";
 const HOLOGRAM = "c-hologram";
+const REDIR_PORTF = "c-redir__portfolio"
 const TAKENOUT = "m-takenout";
 
 export default {
@@ -17,5 +18,6 @@ export default {
   HOLOCARD,
   HOLOCOVER,
   HOLOGRAM,
+  REDIR_PORTF,
   TAKENOUT,
 }
