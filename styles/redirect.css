@@ -1,0 +1,15 @@
+.redirectPortfolio {
+  position: absolute;
+}
+
+.redirectPortfolio.m-disabled {
+  display: none;
+}
+
+.redirectPortfolio a {
+  color: var(--connectBlue);
+  font-size: calc(2vw + 2vh);
+  font-family: "3DIso";
+  text-shadow: 2px 2px 0 var(--cyberPink);
+  text-decoration: none;
+}

@@ -4,6 +4,7 @@
 @import "./holocontent.css";
 @import "./holocover.css";
 @import "./hologram.css";
+@import "./redirect.css";
 
 :root {
   --cyberPink: #f0f;

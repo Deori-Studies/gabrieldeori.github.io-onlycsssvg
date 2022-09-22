@@ -1,6 +1,16 @@
 @font-face {
+  font-family: "3DIso";
+  src: url("./fonts/3DIsometric/3DIsoHalfBlack.ttf");
+}
+
+@font-face {
   font-family: abduction2002;
   src: url("./fonts/abduction_2002/abduction2002.ttf");
+}
+
+@font-face {
+  font-family: azonix;
+  src: url("./fonts/azonix/Azonix.otf");
 }
 
 @font-face {
@@ -14,6 +24,11 @@
 }
 
 @font-face {
+  font-family: hobo;
+  src: url("./fonts/hobo/Hobo.ttf");
+}
+
+@font-face {
   font-family: jackinput;
   src: url("./fonts/jackinput/JAi_____.TTF");
 }
@@ -21,9 +36,4 @@
 @font-face {
   font-family: sono;
   src: url("./fonts/sono/web/Sono-ExtraBold.woff2");
-}
-
-@font-face {
-  font-family: azonix;
-  src: url("./fonts/azonix/Azonix.otf");
 }
