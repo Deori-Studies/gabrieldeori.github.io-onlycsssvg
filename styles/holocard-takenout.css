@@ -3,19 +3,18 @@
   animation: takeHimOut 2s forwards;
 }
 
-.c-holocard.m-takenout#holocard1 {
-  translate: 6vh 0;
-}
-
-.c-holocard.m-takenout#holocard3 {
-  translate: -6vh 0;
-}
-
 @keyframes takeHimOut {
+  from {
+    transform:
+    rotateX(70deg)
+    rotateZ(70deg)
+    translateZ(-42vh);
+  }
+
   to {
     transform:
-      rotateX(0),
-      rotateY(0),
-      translateZ(50vh);
+      rotateX(0)
+      rotateY(0)
+      translateY(50vh);
   }
 }
