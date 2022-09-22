@@ -1,12 +1,12 @@
-.redirectPortfolio {
+.c-redir__portfolio {
   position: absolute;
 }
 
-.redirectPortfolio.m-disabled {
+.c-redir__portfolio.m-disabled {
   display: none;
 }
 
-.redirectPortfolio a {
+.c-redir__portfolio a {
   color: var(--connectBlue);
   font-size: calc(2vw + 2vh);
   font-family: "3DIso";
