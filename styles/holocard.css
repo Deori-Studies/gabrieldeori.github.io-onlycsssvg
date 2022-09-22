@@ -84,3 +84,7 @@
   mask: url("./masks/card/unlocked.svg") no-repeat left;
   -webkit-mask: url("./masks/card/unlocked.svg") no-repeat left;
 }
+
+.c-holocard.m-disabled {
+  display: none;
+}
