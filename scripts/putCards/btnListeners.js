@@ -21,8 +21,12 @@ function btnPutCardListener() {
     holocover.classList.remove(CLASSES.ACTIVE);
 
     cards.forEach((card) => {
-      card.classList.add(CLASSES.CLICKABLE);
-      card.classList.add(CLASSES.CAN_HOVER);
+      const cardIsDisabled = card.classList.contains(CLASSES.DISABLED);
+
+      if(!cardIsDisabled) {
+        card.classList.add(CLASSES.CLICKABLE);
+        card.classList.add(CLASSES.CAN_HOVER);
+      }
     });
 
     holocontent.innerHTML = "";
