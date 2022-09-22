@@ -1,4 +1,4 @@
-.m-clicked__card {
+.m-clicked__card, .m-clicked__card.m-holospecial {
   border-style: outset outset outset outset;
   border-color: #fff5 #bbb3 #bbb3 #fff5;
   border-width: 2px 8px 5px 2px;

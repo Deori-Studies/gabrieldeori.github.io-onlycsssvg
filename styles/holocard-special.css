@@ -1,0 +1,14 @@
+.m-holospecial {
+  position: absolute;
+  animation: boxLight 2s infinite;
+}
+
+@keyframes boxLight {
+  50% {
+    box-shadow: 0 0 10px 10px white;
+  }
+}
+
+.m-holospecial.m-takenout {
+  position: initial;
+}
