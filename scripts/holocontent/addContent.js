@@ -10,9 +10,12 @@ function addContent() {
 
   cards.forEach((card) => {
     card.addEventListener("click", (_e) => {
-      const cardID = card.id;
-      const cardContent = cardsContents[cardID];
-      createAndAppend(cardContent, holocontent);
+      const isClickable = card.classList.contains(CLASSES.CLICKABLE);
+      if (isClickable) {
+        const cardID = card.id;
+        const cardContent = cardsContents[cardID];
+        createAndAppend(cardContent, holocontent);
+      }
     });
   });
 }
