@@ -44,8 +44,8 @@ function createAndAppend(cardContent, holocontent) {
   buttonElement.appendChild(buttonTextNode);
   footerElement.appendChild(buttonElement);  
 
-  holocontent.appendChild(mainElement);
   holocontent.appendChild(headerElement);
+  holocontent.appendChild(mainElement);
   holocontent.appendChild(footerElement);
 
   btnPutCardListener();
