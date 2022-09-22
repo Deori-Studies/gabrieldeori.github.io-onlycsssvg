@@ -1,35 +1,21 @@
-/*
-Model
+import CLASSES from "../variables/CLASSES";
+import IDS from "../variables/IDS";
 
-<header>
-  <h1>CRIATIVIDADE COMO VALOR</h1>
-</header>
-<main>
-  <p>
-  A criatividade é uma competência de valor e
-  aplicabilidade universais, descrita como a
-  capacidade de um indivíduo imaginar, criar,
-  produzir ou inventar conceitos e coisas inéditas.
-  Pode ser entendida também como a ponte entre o
-  pensamento abstrato e o seu correspondente tangível
-  </p><br/>
+function addContent() {
+  const content = document.getElementsById(IDS.HOLOCONTENT);
+  const cards = Array
+    .from(document.getElementsByClassName(CLASSES.HOLOCARD));
 
-  <p>
-  A criatividade é uma competência de valor e
-  aplicabilidade universais, descrita como a
-  capacidade de um indivíduo imaginar, criar,
-  produzir ou inventar conceitos e coisas inéditas.
-  Pode ser entendida também como a ponte entre o
-  pensamento abstrato e o seu correspondente tangível
-  </p><br/>
+  cards.forEach((card) => {
+    card.addEventListener("click", ({ target: { id } }) => {
+      createAllElements(content, id)
+    });
+  });
+}
 
-  <p>
-  A criatividade é uma competência de valor e
-  aplicabilidade universais, descrita como a
-  capacidade de um indivíduo imaginar, criar,
-  produzir ou inventar conceitos e coisas inéditas.
-  Pode ser entendida também como a ponte entre o
-  pensamento abstrato e o seu correspondente tangível
-  </p><br/>
-</main>
-*/
+createAllElements(content, id) {
+}
+
+export {
+  addContent,
+}
