@@ -1,6 +1,7 @@
 import CLASSES from "../variables/CLASSES.js";
 import IDS from "../variables/IDS.js";
 import { cardsContents } from "./cardsContents.js";
+import { btnPutCardListener } from "../putCards/btnListeners.js";
 
 function addContent() {
   const holocontent = document.getElementById(IDS.HOLOCONTENT);
