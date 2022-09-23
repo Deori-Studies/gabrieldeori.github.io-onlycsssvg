@@ -4,7 +4,7 @@
   scale: 0 0;
 }
 
-.c-redir__portfolio a {
+.c-redir__portfolio p {
   color: var(--connectBlue);
   font-size: calc(2vw + 2vh);
   font-family: "3DIso";
