@@ -20,7 +20,37 @@ body {
   overflow: hidden;
 }
 
-.landing-page {
+.c-principal__header {
+  background-color: var(--cyberPink);
+  display: flex;
+  flex-direction: column;
+}
+
+.c-principal__header .c-attention  {
+  background-color: orange;
+  color: white;
+  font-size: calc(0.75vh + 0.75vh);
+  text-align: center;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.c-principal__header h1 {
+  font-size: calc(1.5vh + 1.5vh);
+  font-weight: bold;
+}
+
+.c-principal__header h2 {
+  font-size: calc(1.25vh + 1.25vh);
+}
+
+.c-principal__header a {
+  color: white;
+  background-color: red;
+  font-size: calc(1.2vh + 1.2vh);
+}
+
+.c-principal__main {
   align-items: center;
   background-image: linear-gradient(var(--cyberPink) 10%, 20%, var(--punkBlue) 80%);
   display: flex;
