@@ -15,14 +15,51 @@
 
 @keyframes redirTxtShadowLoop {
   50% {
+    color: var(--punkBlue);
     text-shadow: 4px 4px 2px #f00c;
     font-size: calc(2.1vw + 2.1vh);
   }
 }
 
+.c-redir__portfolio:hover .c-svg-portolio__padlock {
+  -webkit-mask: url("./masks/card/unlocked.svg") no-repeat left;
+  mask: url("./masks/card/unlocked.svg") no-repeat left;
+  animation: fastLoopRedirSVG 1s infinite;
+  align-self: center;
+  height: 5vw;
+  width: 5vw;
+}
+
+@keyframes fastLoopRedirSVG {
+  from {
+    background-color: #aff;
+    scale: 1 1;
+    transform: translate(-1.4vh, 0.6vh) rotate(25deg);
+  }
+
+  25% {
+    transform: translate(1vh, -1.2vh) rotate(-20deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(30deg);
+  }
+
+  75% {
+    transform: translate(0.5vh, 0.25vh) rotate(15deg);
+  }
+
+  to {
+    background-color: var(--connectBlue);
+    scale: 1.2 1.2;
+    transform: translate(-0.5vh, -0.25vh) rotate(0deg);
+  }
+}
+
 .c-redir__portfolio.m-active {
-  display: initial;
   animation: redirAppearAll 3s cubic-bezier(1,0.2,1,0) forwards;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes redirAppearAll {
