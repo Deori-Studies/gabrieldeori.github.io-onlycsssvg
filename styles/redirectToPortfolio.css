@@ -21,9 +21,15 @@
   }
 }
 
+.c-svg-portolio__padlock {
+  align-self: center;
+  height: 0;
+  width: 0;
+}
+
 .c-redir__portfolio:hover .c-svg-portolio__padlock {
   -webkit-mask: url("./masks/card/unlocked.svg") no-repeat left;
-  mask: url("./masks/card/unlocked.svg") no-repeat left;
+  mask: url("./masks/card/unlocked.svg") no-repeat left; 
   animation: fastLoopRedirSVG 1s infinite;
   align-self: center;
   height: 5vw;
