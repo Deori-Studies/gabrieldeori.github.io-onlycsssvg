@@ -4,6 +4,7 @@
   background-color: var(--hologramBlue);
   background-image: repeating-linear-gradient(#fff1 0.25%, #0001 0.75%);
   mask-image: radial-gradient(50% 100%, #000, 70%, #0000 95%);
+  -webkit-mask-image: radial-gradient(50% 100%, #000, 70%, #0000 95%);
   border-radius: 15vh;
   display: flex;
   height: 70vh;

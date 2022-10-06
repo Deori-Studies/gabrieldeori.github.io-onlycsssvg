@@ -115,6 +115,7 @@
     #0000 100%
   );
   mask-image: radial-gradient(#000, 40%, #0000 55%);
+  -webkit-mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   10% {
@@ -129,7 +130,6 @@
     var(--hologramBlue) 80%,
     #0000 100%
   );
-  mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
 
@@ -146,7 +146,6 @@
       var(--hologramBlue) 86%,
       #0000 100%
     );
-    mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   35% {
@@ -162,7 +161,6 @@
       var(--hologramBlue) 94%,
       #0000 100%
     );
-    mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   50% {
@@ -177,7 +175,6 @@
       var(--hologramOther),
       #0000 100%
     );
-      mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   60% {
@@ -192,7 +189,6 @@
       var(--hologramOtherDarker),
       #0000 100%
     );
-    mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   75% {
@@ -207,7 +203,6 @@
       var(--hologramOtherDarker),
       #0000 100%
     );
-      mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   85% {
@@ -223,7 +218,6 @@
       var(--hologramBlue) 92%,
       #0000 100%
     );
-      mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 
   100% {
@@ -238,6 +232,7 @@
       var(--hologramBlue) 87%,
       #0000 100%
     );
-      mask-image: radial-gradient(#000, 40%, #0000 55%);
+    mask-image: radial-gradient(#000, 40%, #0000 55%);
+    -webkit-mask-image: radial-gradient(#000, 40%, #0000 55%);
   }
 }
