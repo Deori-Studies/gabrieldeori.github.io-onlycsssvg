@@ -17,7 +17,6 @@ function mainClassHandler(paramCard, cards) {
 }
 
 function clickCardListener() {
-
   const cards = Array
     .from(document.getElementsByClassName(CLASSES.HOLOCARD));
 
