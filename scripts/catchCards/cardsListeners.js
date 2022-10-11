@@ -8,11 +8,11 @@ function mainClassHandler(paramCard, cards) {
 
   paramCard.classList.add(CLASSES.CLICKED_CARD);
   hologram.classList.add(CLASSES.ACTIVE);
-  holocover.classList.add(CLASSES.ACTIVE);
+  holocover.classList.dd(CLASSES.ACTIVE);
 
-  cards.forEach((otherCards) => {
-    otherCards.classList.remove(CLASSES.CLICKABLE);
-    otherCards.classList.remove(CLASSES.CAN_HOVER);
+  cards.forEach((card) => {
+    card.classList.remove(CLASSES.CLICKABLE);
+    card.classList.remove(CLASSES.CAN_HOVER);
   });
 }
 
